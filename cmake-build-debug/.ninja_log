@@ -1,0 +1,10 @@
+# ninja log v5
+18	206	7239161557565516	CMakeFiles/agenda.dir/main.c.obj	e1361a9fd636d8bf
+0	223	7239161557715517	CMakeFiles/agenda.dir/fichier.c.obj	bde64e5fe226b9f2
+34	230	7239161557815524	CMakeFiles/agenda.dir/application.c.obj	4589623732ea0027
+52	235	7239161557865531	CMakeFiles/agenda.dir/timer.c.obj	d9a2c3cb3bbe251b
+235	445	7239161559916466	agenda.exe	1f9325a6a2ef80ae
+2	66	7239161822236210	CMakeFiles/agenda.dir/main.c.obj	e1361a9fd636d8bf
+66	157	7239161823121372	agenda.exe	1f9325a6a2ef80ae
+1	59	7239163157127475	CMakeFiles/agenda.dir/main.c.obj	e1361a9fd636d8bf
+59	153	7239163158029219	agenda.exe	1f9325a6a2ef80ae
