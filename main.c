@@ -5,18 +5,7 @@
 #include "fichier.h"
 #include "application.h"
 
-int main() {
-    Agenda *agenda = createAgenda(5);
-    Contact *contact = createContact(agenda);
-    displaycontact(agenda);
-    displayRDV(agenda);
-    agenda=addRDV(agenda);
-    displaycontact(agenda);
-    displayRDV(agenda);
-    freeAgenda(agenda);
-    return 0;
-}
-/*
+
 int main() {
 
     t_d_list* list= createList(5);
@@ -86,4 +75,3 @@ int main() {
 
     return 0;
 }
-*/
