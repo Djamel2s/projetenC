@@ -9,7 +9,7 @@ Néanmoins, nous avons fait notre maximum afin de vous présenter notre projet.
 Toutes les fonctions sont utilisables sauf:
 - fonction addRDV (c'est dans cette fonction que l'erreur persiste)
 
-# Guide d'utilisation des fonctions
+# Guide d'utilisation des fonctions (Part. 1)
 Ce programme met en œuvre une liste à niveaux multiples où chaque niveau est une liste chaînée.
 
 ## Fonctions disponibles
@@ -49,6 +49,7 @@ Ce programme met en œuvre une liste à niveaux multiples où chaque niveau est 
  Recherche un élément dans les niveaux supérieurs de la liste.
  **Utilisation :**
  void recherchehigh(t_d_list* list, int val);
+
 ### Exemple d'utilisation
 int main() {
     t_d_list* list = createList(5); // Crée une liste à 5 niveaux
@@ -59,3 +60,60 @@ int main() {
     return 0;
 }
 
+# Guide d'utilisation des fonctions (Part. 3)
+Ce programme implémente la gestion d'un agenda avec des contacts et des rendez-vous.
+
+## Fonctions disponibles
+- `createContact`
+ Crée un nouveau contact et l'ajoute à l'agenda spécifié.
+ **Utilisation :**
+ Contact* createContact(Agenda* list);
+- `createRDV`
+ Crée un nouveau rendez-vous.
+ **Utilisation :**
+ RDV* createRDV();
+- `createAgenda`
+ Crée un agenda avec un nombre spécifié de niveaux.
+ **Utilisation :**
+ Agenda* createAgenda(int max_niv);
+- `addRDV`
+ Ajoute un rendez-vous pour un contact dans l'agenda.
+ **Utilisation :**
+ Agenda* addRDV(Agenda* agenda);
+- `displaycontact`
+ Affiche les contacts présents dans l'agenda.
+ **Utilisation :**
+ void displaycontact(Agenda* list);
+- `displayRDV`
+ Affiche les rendez-vous associés aux contacts dans l'agenda.
+ **Utilisation :**
+ void displayRDV(Agenda* agenda);
+- `compareNoms`
+ Compare les noms et prénoms de deux contacts.
+ **Utilisation :**
+ int compareNoms(char* nom1, char* nom2, char* prenom1, char* prenom2);
+- `freeContact`
+ Libère la mémoire allouée pour un contact.
+ **Utilisation :**
+ void freeContact(Contact* contact);
+- `freeRDV`
+ Libère la mémoire allouée pour un rendez-vous.
+ **Utilisation :**
+ void freeRDV(RDV* rdv);
+- `freeAgenda`
+ Libère la mémoire allouée pour l'agenda, les contacts et les rendez-vous.
+ **Utilisation :**
+ void freeAgenda(Agenda* agenda);
+
+### Exemple d'utilisation
+int main() {
+    Agenda* agenda = createAgenda(5); // Crée un agenda avec 5 niveaux
+    Contact* contact = createContact(agenda); // Crée un nouveau contact dans l'agenda
+    displaycontact(agenda); // Affiche les contacts dans l'agenda
+    displayRDV(agenda); // Affiche les rendez-vous associés aux contacts
+
+    return 0;
+}
+
+#### BUT du projet
+Le but était de créer, gérer et afficher des contacts avec leurs rendez-vous associés dans un agenda.
