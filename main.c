@@ -6,17 +6,13 @@
 #include "application.h"
 
 int main() {
-    Agenda *agenda = createAgenda(5); // Créez un agenda avec 5 niveaux par exemple
-
-    // Créez un contact
+    Agenda *agenda = createAgenda(5);
     Contact *contact = createContact(agenda);
-    displaycontact(agenda); // Affiche les contacts au niveau 0
+    displaycontact(agenda);
     displayRDV(agenda);
-    // Ajoutez un rendez-vous pour ce contact
     agenda=addRDV(agenda);
     displaycontact(agenda);
-    // Affichez les contacts et les rendez-vous
-    displayRDV(agenda); // Affiche les rendez-vous
+    displayRDV(agenda);
     freeAgenda(agenda);
     return 0;
 }
