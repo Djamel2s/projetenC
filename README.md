@@ -16,11 +16,11 @@ Ce programme met en œuvre une liste à niveaux multiples où chaque niveau est 
 - `createCell`
  Crée une cellule avec une valeur stockée.
  **Utilisation :**
- t_d_cell* createCell(int val);
+ ```t_d_cell* createCell(int val);```
 - `createList`
  Crée une liste avec un nombre spécifié de niveaux.
  **Utilisation :**
- t_d_list* createList(int max_niv);
+ ```t_d_list* createList(int max_niv);```
 - `InsertionListentete`
  Insère un élément en tête de la liste à un niveau spécifié.
  **Utilisation :**
