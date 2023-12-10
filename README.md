@@ -61,9 +61,10 @@ int main() {
     return 0;
 }
 ```
-# Guide d'utilisation des fonctions (Part. 1)
+# Guide d'utilisation des fonctions (Part. 2)
 Ce programme génère un fichier de log (log.txt) en mesurant le temps d'exécution des fonctions rechercheclassic et recherchehigh pour différentes valeurs de niveaux.
 Le log.txt ce trouve dans le dossier ```/cmake-build-debug```.
+### Exemple d'utilisation
 ```
 int main() {
     int initial_level = 7;
