@@ -51,6 +51,7 @@ Ce programme met en œuvre une liste à niveaux multiples où chaque niveau est 
  void recherchehigh(t_d_list* list, int val);
 
 ### Exemple d'utilisation
+```
 int main() {
     t_d_list* list = createList(5); // Crée une liste à 5 niveaux
     list = InsertionListentete(list, 10, 0); // Insère l'élément 10 dans le niveau 0
@@ -59,7 +60,7 @@ int main() {
     displaylistaligne(list, 2); // Affiche les éléments du niveau 2 alignés
     return 0;
 }
-
+```
 # Guide d'utilisation des fonctions (Part. 3)
 Ce programme implémente la gestion d'un agenda avec des contacts et des rendez-vous.
 
@@ -106,6 +107,7 @@ Ce programme implémente la gestion d'un agenda avec des contacts et des rendez-
  void freeAgenda(Agenda* agenda);
 
 ### Exemple d'utilisation
+```
 int main() {
     Agenda* agenda = createAgenda(5); // Crée un agenda avec 5 niveaux
     Contact* contact = createContact(agenda); // Crée un nouveau contact dans l'agenda
@@ -114,6 +116,6 @@ int main() {
 
     return 0;
 }
-
+```
 #### BUT du projet
 Le but était de créer, gérer et afficher des contacts avec leurs rendez-vous associés dans un agenda.
