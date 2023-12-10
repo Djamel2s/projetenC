@@ -24,31 +24,31 @@ Ce programme met en œuvre une liste à niveaux multiples où chaque niveau est 
 - `InsertionListentete`
  Insère un élément en tête de la liste à un niveau spécifié.
  **Utilisation :**
- t_d_list* InsertionListentete(t_d_list* list, int val, int niv);
+ ```t_d_list* InsertionListentete(t_d_list* list, int val, int niv);```
 - `InsertionList`
  Permet d'insérer n'importe où dans la liste, à un niveau spécifié (dans tout les niveaux inférieurs)
  **Utilisation :**
- t_d_list* InsertionList(t_d_list* list, int val, int niv);
+ ```t_d_list* InsertionList(t_d_list* list, int val, int niv);```
 - `Listlevel`
  Organise les éléments dans la liste en fonction des niveaux (2n-1).
  **Utilisation :**
- t_d_list* Listlevel(t_d_list* list);
+ ```t_d_list* Listlevel(t_d_list* list);```
 - `displaylist`
  Affiche les éléments d'un niveau spécifié dans la liste.
  **Utilisation :**
- void displaylist(t_d_list* list, int niv);
+ ```void displaylist(t_d_list* list, int niv);```
 - `displaylistaligne`
  Affiche les éléments de la liste alignés selon les niveaux.
  **Utilisation :**
- void displaylistaligne(t_d_list* list, int niv);
+ ```void displaylistaligne(t_d_list* list, int niv);```
 - `rechercheclassic`
  Recherche un élément dans le niveau 0 de la liste.
  **Utilisation :**
- void rechercheclassic(t_d_list* list, int val);
+ ```void rechercheclassic(t_d_list* list, int val);```
 - `recherchehigh`
  Recherche un élément dans les niveaux supérieurs de la liste.
  **Utilisation :**
- void recherchehigh(t_d_list* list, int val);
+ ```void recherchehigh(t_d_list* list, int val);```
 
 ### Exemple d'utilisation
 ```
@@ -68,43 +68,43 @@ Ce programme implémente la gestion d'un agenda avec des contacts et des rendez-
 - `createContact`
  Crée un nouveau contact et l'ajoute à l'agenda spécifié.
  **Utilisation :**
- Contact* createContact(Agenda* list);
+ ```Contact* createContact(Agenda* list);```
 - `createRDV`
  Crée un nouveau rendez-vous.
  **Utilisation :**
- RDV* createRDV();
+ ```RDV* createRDV();```
 - `createAgenda`
  Crée un agenda avec un nombre spécifié de niveaux.
  **Utilisation :**
- Agenda* createAgenda(int max_niv);
+ ```Agenda* createAgenda(int max_niv);```
 - `addRDV`
  Ajoute un rendez-vous pour un contact dans l'agenda.
  **Utilisation :**
- Agenda* addRDV(Agenda* agenda);
+ ```Agenda* addRDV(Agenda* agenda);```
 - `displaycontact`
  Affiche les contacts présents dans l'agenda.
  **Utilisation :**
- void displaycontact(Agenda* list);
+ ```void displaycontact(Agenda* list);```
 - `displayRDV`
  Affiche les rendez-vous associés aux contacts dans l'agenda.
  **Utilisation :**
- void displayRDV(Agenda* agenda);
+ ```void displayRDV(Agenda* agenda);```
 - `compareNoms`
  Compare les noms et prénoms de deux contacts.
  **Utilisation :**
- int compareNoms(char* nom1, char* nom2, char* prenom1, char* prenom2);
+ ```int compareNoms(char* nom1, char* nom2, char* prenom1, char* prenom2);```
 - `freeContact`
  Libère la mémoire allouée pour un contact.
  **Utilisation :**
- void freeContact(Contact* contact);
+ ```void freeContact(Contact* contact);```
 - `freeRDV`
  Libère la mémoire allouée pour un rendez-vous.
  **Utilisation :**
- void freeRDV(RDV* rdv);
+ ```void freeRDV(RDV* rdv);```
 - `freeAgenda`
  Libère la mémoire allouée pour l'agenda, les contacts et les rendez-vous.
  **Utilisation :**
- void freeAgenda(Agenda* agenda);
+ ```void freeAgenda(Agenda* agenda);```
 
 ### Exemple d'utilisation
 ```
