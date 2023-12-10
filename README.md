@@ -1,4 +1,4 @@
-# projetenC
+# Projet d'agenda en C
  Création d'un agenda
 
 Nous avons essayé de nous entenir au consigne assigné à ce projet.
