@@ -56,7 +56,6 @@ int main() {
     Listlevel(list); // Organise les éléments par niveaux
     displaylist(list, 0); // Affiche les éléments du niveau 0
     displaylistaligne(list, 2); // Affiche les éléments du niveau 2 alignés
-
     return 0;
 }
 
