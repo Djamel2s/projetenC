@@ -61,6 +61,44 @@ int main() {
     return 0;
 }
 ```
+# Guide d'utilisation des fonctions (Part. 1)
+Ce programme génère un fichier de log (log.txt) en mesurant le temps d'exécution des fonctions rechercheclassic et recherchehigh pour différentes valeurs de niveaux.
+Le log.txt ce trouve dans le dossier ```/cmake-build-debug```.
+```
+int main() {
+    int initial_level = 7;
+    int final_level = 16;
+    int max_value = 10000;
+    char *time_lvl0;
+    char *time_all_levels;
+    FILE *log_file = fopen("log.txt","w");
+    char format[] = "%d\t%s\t%s\n" ;
+    srand(time(NULL));
+    t_d_list *myList = createList(final_level);
+    myList=Listlevel(myList);
+    for (int level = initial_level; level <= final_level; level++) {
+        //printf("Niveau testé : %d\n", level);
+        //displaylist(myList,level);
+        startTimer();
+        for (int i = 0; i < max_value; i++) {
+            rechercheclassic(myList, (rand()%max_value));
+        }
+        stopTimer();
+        time_lvl0 = getTimeAsString();
+
+        startTimer();
+        for (int i = 0; i < max_value; i++) {
+            recherchehigh(myList, rand() % max_value);
+        }
+        stopTimer();
+        time_all_levels = getTimeAsString();
+
+        fprintf(log_file,format,level,time_lvl0, time_all_levels);
+    }
+    fclose(log_file);
+    return 0;
+}
+```
 # Guide d'utilisation des fonctions (Part. 3)
 Ce programme implémente la gestion d'un agenda avec des contacts et des rendez-vous.
 
