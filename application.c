@@ -4,28 +4,7 @@
 #include "application.h"
 #include <stdio.h>
 #include <stdlib.h>
-/*
-typedef struct {
-    char *nom;
-    char *prenom;
-    struct RDV *rdv;
-    struct Contact* next;
-} Contact;
 
-typedef struct {
-    int jour;
-    int mois;
-    int annee;
-    int heurerdv;
-    int tempsrdv;
-    char *objet;
-} RDV;
-
-typedef struct {
-    struct Contact **head;
-    int max_level;
-}Agenda;
-*/
 Contact* createContact(Agenda* list){
     Contact *newContact = (Contact *)malloc(sizeof(Contact));
     newContact->nom = (char *)malloc(50 * sizeof(char));
@@ -129,7 +108,7 @@ Agenda* addRDV(Agenda* agenda){
 
 void displaycontact(Agenda * list){
     int niv =0;
-    printf("[list head_%d @-]--> ",niv);
+    printf("[agenda contact @-]--> ");
     Contact * p = list->head[niv];
     while (p != NULL){
         printf("[%s|@-]--> ", p->nom);
@@ -143,7 +122,7 @@ void displayRDV(Agenda* agenda) {
     displaycontact(agenda);
     for (int level = 1; level < agenda->max_level; level++) {
         Contact* actuelContact = agenda->head[level];
-        printf("[list  rdv_%d @-]--> ", level);
+        printf("[agenda rdv n'%d @-]--> ", level);
         while (actuelContact != NULL) {
             RDV* currRDV = actuelContact->rdv;
             printf("[%d/%d/%d @-]--> ", currRDV->jour, currRDV->mois, currRDV->annee);
@@ -151,7 +130,7 @@ void displayRDV(Agenda* agenda) {
         }
         printf("NULL\n");
         Contact* p = agenda->head[level];
-        printf("                --> ");
+        printf("                   --> ");
         while (p != NULL) {
             RDV* RDV = p->rdv;
             printf("[%d|%d @-]--> ", RDV->heurerdv, RDV->tempsrdv);
@@ -159,7 +138,7 @@ void displayRDV(Agenda* agenda) {
         }
         printf("NULL\n");
         Contact* p1 = agenda->head[level];
-        printf("                --> ");
+        printf("                   --> ");
         while (p1 != NULL) {
             RDV* RDV = p1->rdv;
             printf("[%s @-]--> ", RDV->objet);
